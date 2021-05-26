@@ -34,8 +34,20 @@ public class Citizen {
         this.name = name;
     }
 
-    public Citizen(Long id, String name) {
+    public Citizen(Long id, String name, Boolean hasVoted) {
         this.id = id;
         this.name = name;
+        this.hasVoted = hasVoted;
+    }
+
+    @Column(name = "hasvoted")
+    private Boolean hasVoted;
+
+    public boolean isHasVoted() {
+        return hasVoted;
+    }
+
+    public void setHasVoted(boolean hasVoted) {
+        this.hasVoted = hasVoted;
     }
 }
