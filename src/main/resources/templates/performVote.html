@@ -6,5 +6,9 @@
 </head>
 <body>
 Choose your candidate
+<div th:each="candidate : ${candidates}">
+    <a th:href="@{/voteFor(id=${candidate.id})}" th:text="${candidate.name}"></a>
+</div>
+
 </body>
 </html>

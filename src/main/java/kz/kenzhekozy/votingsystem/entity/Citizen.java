@@ -10,16 +10,16 @@ import javax.persistence.Table;
 public class Citizen {
     @Id
     @Column (name = "id")
-    private Long id;
+    private Integer id;
 
     public Citizen() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -34,7 +34,7 @@ public class Citizen {
         this.name = name;
     }
 
-    public Citizen(Long id, String name, Boolean hasVoted) {
+    public Citizen(Integer id, String name, Boolean hasVoted) {
         this.id = id;
         this.name = name;
         this.hasVoted = hasVoted;
